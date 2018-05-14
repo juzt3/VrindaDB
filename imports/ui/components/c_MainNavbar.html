@@ -1,0 +1,54 @@
+<template name="c_MainNavbar">
+	<div class="row">
+		<nav class="top-nav teal">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo"><b>Vrinda</b>DB</a>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<!-- Menu para escritorio -->
+					<li class="bold"><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+					{{#if currentUser}}
+						<li><a href="/newdb"><i class="material-icons left">add</i>Nuevo Programa</a></li>
+						<li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Salir</a></li>
+					{{/if}}
+				</ul>
+				<!-- Menu para mobiles -->
+				<ul class="side-nav" id="nav-mobile">
+					<li>
+						<a href="/">
+							<h4>
+								<b>Vrinda</b>DB
+							</h4>
+						</a>
+					</li>
+					<li><a href="/"><i class="material-icons left">home</i>Inicio</a></li>
+					{{#if currentUser}}
+						<li>
+							<a href="/personas"><i class="material-icons">people</i> Personas</a>
+						</li>
+					{{/if}}
+					<li class="no-padding">
+						<ul class="collapsible" data-collapsible="accordion" id="mis_programas">
+							{{#if currentUser}}
+								<li>
+									<a class="collapsible-header">Mis Programas<i class="material-icons">arrow_drop_down</i></a>
+									<div class="collapsible-body">
+										<ul>
+											<li><a href="/newdb"><i class="material-icons left">add</i>Nuevo Programa</a></li>
+											{{#each mis_programas}}
+												<li>
+													<a href="/program/{{_id}}">{{nombre}}</a>
+												</li>
+											{{/each}}
+										</ul>
+									</div>
+								</li>
+							{{/if}}
+						</ul>
+					</li>
+					<li><a href="#" id="logout"><i class="material-icons left">exit_to_app</i>Salir</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</template>

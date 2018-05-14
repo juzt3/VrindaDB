@@ -1,0 +1,7 @@
+<template name="homePage">
+	{{#if currentUser}}
+		{{> landingPage}}
+	{{else}}
+		{{> loginPage}}
+	{{/if}}
+</template>

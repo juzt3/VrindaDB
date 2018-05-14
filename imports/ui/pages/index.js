@@ -1,0 +1,14 @@
+import '/imports/ui/pages/homePage.html';
+import '/imports/ui/pages/loginPage.html';
+import '/imports/ui/pages/loginPage.js';
+import '/imports/ui/pages/landingPage.html';
+import '/imports/ui/pages/landingPage.js';
+import '/imports/ui/pages/newDBPage.html';
+import '/imports/ui/pages/programDetailsPage.html';
+import '/imports/ui/pages/programDetailsPage.js';
+import '/imports/ui/pages/programUpdatePage.html';
+import '/imports/ui/pages/programUpdatePage.js';
+import '/imports/ui/pages/newInscripcionPage.html';
+import '/imports/ui/pages/newInscripcionPage.js';
+import '/imports/ui/pages/personasPage.html';
+import '/imports/ui/pages/newPersona.html';

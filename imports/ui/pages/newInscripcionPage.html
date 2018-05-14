@@ -1,0 +1,13 @@
+<template name="newInscripcionPage">
+	<div class="container">
+		<div class="row">
+			<div class="card-panel">
+				<h3 class="center-align">Nueva Inscripción</h3>
+				<div class="center-align">
+					<label style="font-size: 1rem">{{program.nombre}}</label>
+				</div>
+				{{> quickForm collection="Programas" doc=program id="insertInscripcion" type="update-pushArray" scope="inscripciones" buttonContent="Guardar"}}
+			</div>
+		</div>
+	</div>
+</template>

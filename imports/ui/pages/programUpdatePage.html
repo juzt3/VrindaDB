@@ -1,0 +1,9 @@
+<template name="programUpdatePage">
+	<div class="container">
+		<div class="row">
+			<div class="card-panel">
+				{{> quickForm collection="Programas" doc=program id="updateProgramsForm" type="update" omitFields="inscripciones" buttonContent="Guardar"}}
+			</div>
+		</div>
+	</div>
+</template>

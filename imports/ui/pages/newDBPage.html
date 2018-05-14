@@ -1,0 +1,12 @@
+<template name="newDBPage">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="card-panel">
+					<h3 class="center-align">Nuevo Programa</h3>
+					{{> quickForm collection="Programas" id="insertProgramasForm" type="insert" omitFields="inscripciones" buttonContent="Guardar"}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
