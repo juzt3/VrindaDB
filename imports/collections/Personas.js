@@ -1,5 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from "meteor/tracker";
+import Tabular from 'meteor/aldeed:tabular';
 
 SimpleSchema.extendOptions(['autoform']);
 
@@ -78,3 +79,39 @@ Schemas.Persona.messageBox.messages({
 });
 
 Personas.attachSchema(Schemas.Persona);
+
+new Tabular.Table({
+	name: "TablaPersonas",
+	collection: Personas,
+	responsive: true,
+	autoWidth: false,
+	columns: [
+		{
+			data: "rut",
+			title: "Rut"
+		},
+		{
+			data: "nombre",
+			title: "Nombre"
+		},
+		{
+			data: "ciudad",
+			title: "Ciudad de residencia"
+		},
+		{
+			data: "email",
+			title: "E-mail"
+		},
+		{
+			data: "whatsapp",
+			title: "Whatsapp"
+		},
+		{
+			data: "_id",
+			title: "Inscripciones",
+			render: function(val){
+				return "<a class='btn' href=/personas/detalles/"+val+">Ver</a>";
+			}
+		}
+	]
+});
